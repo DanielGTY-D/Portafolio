@@ -1,11 +1,123 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import cards from "../data/card.json";
+import "remixicon/fonts/remixicon.css";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="container mx-auto lg:max-w-10/12">
+    <div
+      class="flex flex-col sm:flex-row gap-4 justify-between items-center py-5 backdrop-blur-lg"
+    >
+      <h2 class="text-purple-800 uppercase">
+        Yael Torres - <span class="text-purple-950">frontend developer</span>
+      </h2>
+      <nav class="">
+        <ul class="flex items-center gap-4 list-none">
+          <li class="text-base group">
+            <a
+              class="text-purple-800 transition-all duration-700 p-2 rounded-2xl group-hover:bg-gradient-to-r from-purple-300 to-purple-100"
+              href=""
+			>
+			  Proyectos
+			</a
+          </li>
+          <li class="text-base group">
+            <a
+              class="text-purple-800 transition-all duration-700 p-2 rounded-2xl group-hover:bg-gradient-to-r from-purple-300 to-purple-100 "
+              href="">About</a
+          </li>
+          <li class="text-base group">
+            <a
+              class="text-purple-800 transition-all duration-700 p-2 rounded-2xl group-hover:bg-gradient-to-r from-purple-300 to-purple-100 "
+              href="">Contacto</a
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section
+      class="flex flex-col-reverse md:flex-row-reverse md:items-center sm:justify-between gap-4 py-12 px-5 bg-[url('https://images.unsplash.com/photo-1579403124614-197f69d8187b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-no-repeat after:bg-black after:opacity-70 after:w-full after:h-full after:absolute after:top-0 after:left-0 after:z-10 relative"
+    >
+      <div class="w-fit ">
+        <p class="z-20 relative text-purple-200">
+          Que tal, soy Yael Torres, un apasionado del desarrollo web y
+          actualmente me encuentro estudiando la carrera de ingeniería en
+          sistemas computacionales. Me encanta aprender nuevas tecnologías y
+          mejorar mis habilidades constantemente. En este portafolio encontrarás
+          algunos de mis proyectos más destacados, donde he aplicado mis
+          conocimientos en HTML, CSS, JavaScript y frameworks modernos como
+          React. Espero que disfrutes explorando mi trabajo tanto como yo
+          disfruté creándolo.
+        </p>
+      </div>
+
+      <img
+        class="h-[10rem] w-[10rem] rounded-full z-20 relative"
+        src="/perfil.jpg"
+        alt="foto de perfil"
+      />
+    </section>
+
+	<section class="bg-purple-100 p-5">
+		<h2 class="text-2xl text-purple-800 font-bold">Expreciencia laboral</h2>
+
+		<ul class="mt-10 md:grid md:grid-cols-2 ">
+			<li class="p-2.5 border-2 border-purple-300 rounded-xl mb-4">
+				<h3 class="bg-gradient-to-r to-purple-100 from-purple-300 w-fit p-2 text-purple-800 rounded-xl">Desarrllador fron-end en grupo formula</h3>
+
+				<div class="mt-4"> 
+					<p class=""><span class="text-purple-900">Fecha:</span> Octubre de 2024 - agosto de 2025</p>
+
+					<p>
+						Resolviendo bugs en CSM utilizado para la publicacion de noticias en diferentes sitions web. 
+						Asi como maqutacion de sitios web con frameworks recientes <span class="text-purple-800 italic">(Astro)</span>, utilizando componentes personalizados
+					</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+    <section class="pt-12 px-5">
+      <h3 class="text-2xl font-bold">Proyectos destacados</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 pt-4">
+        {
+          cards.map((card) => (
+            <div class="bg-white rounded-lg shadow-md p-4 hover:trasform hover:scale-105 duration-300">
+              <img
+                class="w-full h-40 object-cover rounded-t-lg"
+                src={card.image}
+                alt={card.name}
+              />
+              <h4 class="text-xl font-semibold mt-2">{card.name}</h4>
+              <p class="text-gray-600 mt-1">{card.description}</p>
+
+              <ul class="mt-5">
+                {card.technologies.map((tech) => (
+                  <li class="inline-block bg-purple-100 text-purple-800 text-sm px-2 py-1 rounded-full mr-2 mt-2 cursor-pointer">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+
+              <div class="flex justify-between mt-5">
+                <a
+                  href={card.website}
+                  class="text-purple-800 bg-purple-100 py-2 px-5 rounded-4xl hover:bg-purple-200 transition duration-300 mt-2 inline-block"
+                >
+                  Repositorio
+                </a>
+                <a
+                  href={card.repository}
+                  class="text-purple-800 bg-purple-100 py-2 px-5 rounded-4xl hover:bg-purple-200 transition duration-300 mt-2 inline-block"
+                >
+                  Ver proyecto
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
 </Layout>
