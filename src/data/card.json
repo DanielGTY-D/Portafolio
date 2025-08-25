@@ -15,31 +15,5 @@
     ],
     "repository": "https://github.com/DanielGTY-D/AbsoluteMovies",
     "website": "https://absolutemovies.netlify.app"
-  },
-  {
-    "id": 2,
-    "name": "Absolute Movies",
-    "description": "Biblioteca de peliculas y series , en el que puedes buscar tu pelicula o serie favorita, asi como agregarlas a tu perfil para poder tener un registro de cuales aun te faltan por ver...",
-    "image": "https://images.unsplash.com/photo-1735825764451-d2186b7f4bf9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "technologies": [
-      "React",
-      "React Router",
-      "HTML5",
-      "Sass",
-      "Node.js",
-      "Express",
-      "MongoDB"
-    ],
-    "repository": "",
-    "website": "https://example.com/absolute-movies"
-  },
-  {
-    "id": 3,
-    "name": "Card Three",
-    "description": "Este es un poroyecto de una BarberShop en la cual me incluyo un companero de trabajo, mientras estaba en practicas profesionales en la empresa",
-    "image": "https://images.unsplash.com/photo-1735825764451-d2186b7f4bf9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "technologies": [],
-    "repository": "",
-    "website": "https://example.com/card-three"
   }
 ]
