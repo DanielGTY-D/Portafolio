@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Absolute Movies",
-    "description": "Proyecto en el cual puedes ver cuales son las peliculas y series en tendencias, utilizando la api de TMDB",
+    "description": "Proyecto de biblioteca de peliculas y series, en el que pudes buscar tus peliculas o serries favoritas, asig como agregarlas a tu peril para poder tener un registro de cuales aun te faltan por ver..., Este proyecto se desarrollo con React, React Router, HTML5, Node.js, Express, MongoDB y tailwindCss. Agrego un disclaimer, y es que como la api esta alojada en un servicio gratutio a veces tarda en responder, pero funcionca correctamente",
     "image": "https://images.unsplash.com/photo-1735825764451-d2186b7f4bf9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "technologies": [
       "React",
@@ -13,8 +13,8 @@
       "MongoDB",
       "tailwindCss"
     ],
-    "repository": "",
-    "website": "https://example.com/absolute-anime"
+    "repository": "https://github.com/DanielGTY-D/AbsoluteMovies",
+    "website": "https://absolutemovies.netlify.app"
   },
   {
     "id": 2,
